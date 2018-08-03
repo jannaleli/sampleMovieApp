@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dmx-j6-fSB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Nxs-Bc-BrQ">
+            <objects>
+                <viewController id="dmx-j6-fSB" customClass="ViewController" customModule="movieSort" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="emD-wK-hu4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q5W-EP-xg6">
+                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dmx-j6-fSB" id="RSJ-5l-AKO"/>
+                                    <outlet property="delegate" destination="dmx-j6-fSB" id="4eA-hM-PgC"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCC-qW-mqC">
+                                <rect key="frame" x="163" y="30" width="48" height="30"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="search:" destination="dmx-j6-fSB" eventType="touchDown" id="7ws-AK-iTd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FCC-qW-mqC" firstAttribute="centerX" secondItem="q5W-EP-xg6" secondAttribute="centerX" id="1Tb-of-X2u"/>
+                            <constraint firstItem="q5W-EP-xg6" firstAttribute="top" secondItem="FCC-qW-mqC" secondAttribute="bottom" constant="16" id="8XF-0I-neU"/>
+                            <constraint firstItem="dbc-l0-9VK" firstAttribute="bottom" secondItem="q5W-EP-xg6" secondAttribute="bottom" id="Rg4-o6-MRv"/>
+                            <constraint firstItem="FCC-qW-mqC" firstAttribute="top" secondItem="dbc-l0-9VK" secondAttribute="top" constant="10" id="YPd-Oz-USi"/>
+                            <constraint firstItem="dbc-l0-9VK" firstAttribute="trailing" secondItem="q5W-EP-xg6" secondAttribute="trailing" id="rOH-Pj-48q"/>
+                            <constraint firstItem="q5W-EP-xg6" firstAttribute="leading" secondItem="dbc-l0-9VK" secondAttribute="leading" id="yW8-Zp-6NI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dbc-l0-9VK"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="q5W-EP-xg6" id="6KO-2p-Pbi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7XT-QI-F2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.399999999999999" y="160.56971514242881"/>
+        </scene>
+    </scenes>
+</document>
